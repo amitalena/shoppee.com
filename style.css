@@ -1,0 +1,205 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rubik', sans-serif;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+    
+    html {
+        overflow-x: hidden;
+    }
+    
+     :root {
+        /* Jebsen Careers */
+        --g-sky: #99DDFF;
+        --w-green: #3FD2C7;
+        --b-blue: #00458B;
+        /* IC Creativity */
+        --orange-r: #FB8122;
+        --black-b: #1D2228;
+        --white-d: #E1E2E2;
+        /* Puerto Mate */
+        --yellow-g: #FFCF43;
+        --blue-f: #01345B;
+        --sky-w: #5CE0D8;
+        /* Gabrielle Dolan */
+        --r-white: #E8EAE3;
+        --b-black: #373833;
+        --l-red: #FA2742;
+        /*  Bankyfy */
+        --yellow-2: #FECD45;
+        --blue2: #2568FB;
+    }
+    
+    .bg-blue-f {
+        background: var(--blue-f)
+    }
+    
+    .bg-yellow-g {
+        background: var(--yellow-g)
+    }
+    
+    .bg-sky-w {
+        background: var(--sky-w)
+    }
+    
+    .text-blue-f {
+        color: var(--blue-f)
+    }
+    
+    .text-yellow-g {
+        color: var(--yellow-g)
+    }
+    
+    .text-sky-w {
+        color: var(--sky-w)
+    }
+    
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        font: var(--blcack)
+    }
+    
+    body::-webkit-scrollbar {
+        background: var(--sky-w);
+        width: 10px;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background-color: #ffffff;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        padding: 5px;
+        background: var(--sky-w);
+        border-radius: 50px;
+    }
+    /* head */
+    
+    .headabout {
+        font-size: 20vh;
+        background-image: url('./png/group-people-working-out-business-plan-office_1303-15861.avif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    /* navbar */
+    
+    .navbar .active {
+        background: var(--sky-w);
+        color: var(--blue-f);
+    }
+    /* new details */
+    /* #product_effect {
+        background-image: url('./images/wireless-earphones-smartphone-cup-coffee_140725-8933.avif');
+        height: 300px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } */
+    
+    #new_sect {
+        background-image: url('./png/testimonials2.jpg');
+        background-attachment: fixed;
+        height: 70vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        /* background: linear-gradient(124deg, #FFCF43 70%, #01345B 10%, #5CE0D8 20%); */
+    }
+    /* register */
+    
+    #sign-up {
+        background: url('./images/sign-up-form-button-graphic-concept_53876-133556.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #sign-in {
+        background: url('./images/member-log-membership-username-password-concept_53876-167146.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 77vh;
+    }
+    /* media quiery */
+    
+    @media screen and (max-width: 640px) {
+        .menu {
+            display: none;
+            height: 100vh;
+            width: 99%;
+            /* text-align: center; */
+            transition: all .5s;
+            float: none;
+            position: absolute;
+            background: var(--blue-f);
+            left: 0;
+            top: -2px;
+            padding: 20px 0px;
+            border-top: 1px solid gray;
+            /* clip-path: circle(0% at 100% 0%); */
+        }
+        #sign-in {
+            height: 100%;
+        }
+        #sign-up {
+            height: 100%;
+        }
+        #icons-2 {
+            display: none;
+        }
+        #icons-3 {
+            display: block;
+        }
+        .main {
+            /* background-color: var(--yellow-g); */
+            padding: 10px;
+        }
+        .navbar li {
+            color: var(--yellow-g);
+            display: block;
+            text-align: center;
+            margin: 15px 5px;
+            margin-left: 20px;
+            width: 150px;
+        }
+        #header-1 {
+            padding-left: -100px;
+        }
+        .navbar li a ::after {
+            display: none;
+        }
+        .main i {
+            margin-right: 5px;
+        }
+        .main {
+            transition: all 1s;
+            cursor: pointer;
+            display: block;
+            /* clip-path: circle(112% at 100%); */
+        }
+        .user-page {
+            padding-left: 100px;
+        }
+        .products-det {
+            padding-left: 100px;
+        }
+        #new_sect {
+            height: 100%;
+            width: 100%;
+        }
+        .imgs-page img {
+            padding-left: 90px;
+        }
+    }

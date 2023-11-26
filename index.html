@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shoppy</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+    <!-- Splide JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="header w-full md:px-[186px] z-50 scroll">
+        <div class="md:flex md:justify-between items-center shadow user-page py-1 px-2">
+            <div class="py-2 text-blue-f">
+                <h1>Need Help? <span>Call Us:</span><span>+916393351817</span></h1>
+            </div>
+            <ul class="flex items-center gap-5 text-center">
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[80px] rounded p-2"><a href="register.html">Register</a></li>
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[80px] rounded p-2"><a href="login.html">Login</a></li>
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[120px] rounded p-2"><a href="account.html">My Account</a></li>
+            </ul>
+        </div>
+        <div class="md:flex md:justify-between items-center bg-white py-3">
+            <a href="#home.html" class="logo text-black font-bold text-4xl px-3">Shoppee.com <span class="text-red-600"></span></a>
+            <div class="user">
+                <div class="user1 flex justify-between p-2">
+                    <form action="" class="search-form pl-3 flex bg-white rounded shadow">
+                        <input type="search" placeholder="search here..." id="search-box" class=" pr-3 bg-none outline-none md:w-[410px] p-2">
+                        <button class="search" onclick="ok();"><i class="ri-search-line  rounded text-blue-f outline-none bg-sky-w p-3 px-10 text-xl"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="flex md:justify-between items-center mx-2" id="icons-2">
+                <a href="cart.html"><i class="ri-moon-line text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html"><i class="fa-regular fa-heart text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html" class="flex items-center text-center"><i class="fa-solid fa-cart-shopping text-blue-f text-2xl p-1"></i>Cart</a>
+            </div>
+        </div>
+        <div class="main md:hidden px-3 flex items-center justify-between bg-yellow-g">
+            <i class="ri-menu-line font-bold text-3xl"></i>
+            <div class="px-10 flex items-center">
+                <a href="cart.html"><i class="ri-moon-line text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html"><i class="fa-regular fa-heart text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html" class="flex items-center text-center"><i class="fa-solid fa-cart-shopping text-blue-f text-2xl p-1"></i>Cart</a>
+            </div>
+        </div>
+    </nav>
+    <header class="sticky z-50 top-0">
+        <div class="menu md:flex md:justify-around md:items-center bg-blue-f p-2" id="header-1">
+            <select class="grid grid-cols-1 p-3 bg-yellow-g text-blue-f ml-[20px] px-5">
+                    <option value="Mobile" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Mobile Phones</option>
+                    <option value="Desktop" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Desktop</option>
+                    <option value="Laptop" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Laptop</option>
+                    <option value="HeadPhone" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>HeadPhone</option>
+                    <option value="PanDrive" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>PanDrive</option>
+                    <option value="Camera" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Camera</option>
+                    <option value="Speaker" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Speaker</option>
+                </select>
+            <ul class="navbar md:flex justify-between text-blue-f md:ml-[300px]">
+                <li class="text-yellow-g hover:scale-100 pt-4 active text-center h-[55px] md:w-[100px] duration-300 active"><a href="index.html">home</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="about.html">about</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[150px] duration-300"><a href="newarraival.html">new Arraivals</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="blog.html">blogs</a></li>
+                <!-- <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="gallery.html">gallery</a></li> -->
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- section1 -->
+    <section class="w-full md:px-[220px] md:flex" id="section1">
+        <div class="splide md:w-full md:border mt-2 py-10 md:h-[620px]">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="main-1 md:flex md:items-center">
+                            <img src="./png/r5-removebg-preview.png" alt="" class="w-[450px] pl-10 md:h-[400px]">
+                            <div class="md:ml-[150px] p-4">
+                                <h1 class="text-5xl font-bold text-sky-w">CLEARANCE</h1>
+                                <h2 class="text-9xl py-3 font-bold text-sky-w">SALE</h2>
+                                <P class="text-gray-500 text-3xl">Up To 20% OFF</P>
+                                <p class="w-[400px] text-black py-3 text-xl">Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</p>
+                                <a href="login.html" class="bg-blue-f mx-1 text-white text-center p-3 rounded">Shop Now</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="main-1 md:flex md:items-center">
+                            <img src="./png/ww1-removebg-preview.png" alt="" class="w-[450px] pl-10 md:h-[400px]">
+                            <div class="md:ml-[150px] p-4">
+                                <h1 class="text-5xl font-bold text-sky-w">CLEARANCE</h1>
+                                <h2 class="text-9xl py-3 font-bold text-sky-w">SALE</h2>
+                                <P class="text-gray-500 text-3xl">Up To 20% OFF</P>
+                                <p class="w-[400px] text-black py-3 text-xl">Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</p>
+                                <a href="login.html" class="bg-blue-f mx-1 text-white text-center p-3 rounded">Shop Now</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="main-1 md:flex md:items-center">
+                            <img src="./images/di2-removebg-preview.png" alt="" class="w-[450px] pl-10 md:h-[400px]">
+                            <div class="md:ml-[150px] p-4">
+                                <h1 class="text-5xl font-bold text-sky-w">CLEARANCE</h1>
+                                <h2 class="text-9xl py-3 font-bold text-sky-w">SALE</h2>
+                                <P class="text-gray-500 text-3xl">Up To 20% OFF</P>
+                                <p class="w-[400px] text-black py-3 text-xl">Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</p>
+                                <a href="login.html" class="bg-blue-f mx-1 text-white text-center p-3 rounded">Shop Now</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="my-slider-progress">
+                    <div class="my-slider-progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section3 -->
+    <section class="md:flex md:justify-between md:px-[220px]">
+        <div class="md:w-[73%] mt-2">
+            <div class="m-1">
+                <div class="flex justify-between items-center bg-blue-f border ">
+                    <h1 class="text-xl p-4 uppercase text-yellow-g">New Products</h1>
+                    <a href="#" class="text-yellow-g flex items-center">See All Product<i class="ri-arrow-right-s-fill text-sky-w text-2xl "></i></a>
+                </div>
+                <div class="mt-5 md:grid md:grid-cols-3">
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./images/galaxy-a34-5g-sm.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">SAMSUNG</p>
+                            <p class="text-center ">Sumsumng Gallexy A34-5G</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 flex px-10 justify-between items-center">
+                                <p class="text-blue-f text-2xl ml-5 ">₹28,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹35,499</s>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./png/vivo original.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">Vivo</p>
+                            <p class="text-center ">vivo V29 5G (Red, 128 GB)</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 flex px-10 justify-between items-center">
+                                <p class="text-blue-f text-2xl ml-5 ">₹32,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹38,999</s>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./images/oppo a78 5g.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">OPPO</p>
+                            <p class="text-center ">Oppo A78-5G</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 px-10 flex justify-between">
+                                <p class="text-blue-f text-2xl ml-5">₹18,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹21,999</s>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- section4 -->
+            <div class="mt-5">
+                <div class="flex justify-between items-center bg-blue-f border ">
+                    <h1 class="text-xl p-4 uppercase text-yellow-g">feature product</h1>
+                    <a href="# " class="text-yellow-g flex items-center">See All Product<i class="ri-arrow-right-s-fill text-sky-w text-2xl "></i></a>
+                </div>
+                <div class="mt-5 grid md:grid-cols-3">
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./png/moto g84-5g-original.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">Motorola</p>
+                            <p class="text-center ">MOTOROLA g84 5G (Viva Magneta, 256 GB)</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 flex px-10 justify-between items-center">
+                                <p class="text-blue-f text-2xl ml-5 ">₹18,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹22,999</s>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./png/oppo flipn3-original.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">Oppo</p>
+                            <p class="text-center">OPPO Find N3 Flip</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 flex px-10 justify-between items-center">
+                                <p class="text-blue-f text-2xl ml-5 ">₹94,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹99,999</s>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                        <a href="./new_detail.html">
+                            <img src="./png/iphone 14-original.webp" alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                            <p class="text-sky-w text-center text-3xl ">Apple</p>
+                            <p class="px-10">APPLE iPhone 14 Plus (Starlight, 128 GB)</p>
+                            <div class="text-center ">
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                            </div>
+                            <div class="my-1 flex px-10 justify-between items-center">
+                                <p class="text-blue-f text-2xl ml-5 ">₹68,999</p>
+                                <s class="text-black opacity-70 px-3 line-through">₹79,900</s>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- section5 -->
+            <div class="h-full mt-5">
+                <div class="filter-container bg-blue-f gap-10 p-3">
+                    <button class="filter-btn h-[50px] w-[150px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="all">All Products</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category1">Samsung</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category2">Apple</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category3">One plus</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category4">Oppo</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category5">Vivo</button>
+                    <button class="filter-btn h-[50px] w-[100px] p-2 text-blue-f text-blue-f hover:text-white rounded bg-sky-w mt-1" data-filter="category6">Redmi</button>
+                    <!-- Add more buttons for different categories as needed -->
+                </div>
+                <div class="items-container grid md:grid-cols-3 mt-3">
+                    <!-- Your content items go here with appropriate data-filter attributes -->
+                    <div class="item py-5" data-category="category1">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/samsung f13-original.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">Samsung</p>
+                                    <p class="px-5">SAMSUNG Galaxy F13 (Waterfall Blue, 128 GB) (4 GB RAM)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹9,199</p>
+                                        <s class="text-black opacity-70 px-3 line-through">₹16,999</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item py-5" data-category="category2">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/iphone-original.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">Apple</p>
+                                    <p class="px-5">APPLE iPhone 15 Pro (Blue Titanium, 128 GB)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹1,34,900</p>
+                                        <s class="text-black opacity-70 px-3 line-through">$1,50,000</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item py-5" data-category="category3">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/oneplus-original.webp" alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">One plus</p>
+                                    <p class="px-5">OnePlus Nord CE 3 Lite 5G (Chromatic Gray, 256 GB)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹21,947</p>
+                                        <s class="text-black opacity-70 px-3 line-through">₹21,999</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item py-5" data-category="category4">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/oppo a77-original.webp" alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">Oppo</p>
+                                    <p class="px-5">OPPO A77 (Sunset Orange, 128 GB)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹13,999</p>
+                                        <s class="text-black opacity-70 px-3 line-through">₹19,999</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item py-5" data-category="category5">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/vivo x20-originalz.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">Vivo</p>
+                                    <p class="px-5">vivo T2x 5G (Aurora Gold, 128 GB) (4 GB RAM)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹11,999</p>
+                                        <s class="text-black opacity-70 px-3 line-through">₹17,999</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item py-5" data-category="category6">
+                        <div class="img-port relative">
+                            <a href="./new_detail.html">
+                                <div class="md:w-[300px] products-det items-center border shadow-2xl pl-5 rounded-md">
+                                    <img src="./png/redmi-original1.webp " alt=" " class="w-[180px] h-[220px] mx-[40px] p-5 hover:scale-105 duration-300">
+                                    <p class="text-sky-w text-center text-3xl ">Redmi</p>
+                                    <p class="px-5">REDMI 12 (Moonstone Silver, 128 GB)</p>
+                                    <!-- <div class="text-center ">
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                                    </div> -->
+                                    <div class="my-1 flex px-10 justify-between items-center">
+                                        <p class="text-blue-f text-2xl ml-5 ">₹10,499</p>
+                                        <s class="text-black opacity-70 px-3 line-through">₹15,999</s>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-[25%] shadow-xl p-3 bg-slate-50 rounded-md">
+            <div class="p-3 my-3">
+                <h1 class="text-3xl font-bold py-3">Custome Reviews</h1>
+                <a href="#" class="py-1 flex items-center">
+                    <div>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                    </div>
+                    <h1 class="px-3">5.0</h1>
+                </a>
+                <a href="#" class="py-1 flex items-center">
+                    <div>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                    </div>
+                    <h1 class="px-3">4.0</h1>
+                </a>
+                <a href="#" class="py-1 flex items-center">
+                    <div>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                    </div>
+                    <h1 class="px-3">3.5</h1>
+                </a>
+                <a href="#" class="py-1 flex items-center">
+                    <div>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                    </div>
+                    <h1 class="px-3">3.0</h1>
+                </a>
+                <a href="#" class="py-1 flex items-center">
+                    <div>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-fill text-yellow-g text-2xl"></i>
+                        <i class="ri-star-half-fill text-yellow-g text-2xl"></i>
+                    </div>
+                    <h1 class="px-3">2.5</h1>
+                </a>
+            </div>
+            <!-- price -->
+            <div class="p-3 my-3">
+                <h1 class="text-3xl font-bold py-3">Price</h1>
+                <a href="#" class="py-1 flex items-center">
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">Under $1,000</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">₹1,000 - $5,000</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">₹5,000 - $10,000</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">₹10,000 - $20,000</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">₹20,000 - $30,000</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a href="#">
+                            <p class="hover:text-yellow-500">Over $30,000</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- Discont -->
+            <div class="p-3 my-3">
+                <h1 class="text-3xl font-bold py-3">Discount</h1>
+                <a class="py-1 flex items-center">
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">5% or More</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">10% or More</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">20% or More</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">30% or More</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">50% or More</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">60% or More</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- electronics -->
+            <div class="p-3 my-3">
+                <h1 class="text-3xl font-bold py-3">Electronics</h1>
+                <a class="py-1 flex items-center">
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Accesories</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Tabltes</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Mobiles & Accesories</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">HeadPhones</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Computers & Accesories</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Camera & Photographics</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- dilevery -->
+            <div class="p-3 my-3">
+                <h1 class="text-2xl font-bold py-3 uppercase">Cash On Delivery</h1>
+                <a class="py-1 flex items-center">
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Eligible For Cash On Delivery</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- New arrivals -->
+            <div class="p-3 my-3">
+                <h1 class="text-2xl font-bold py-3 uppercase">New Arraivals</h1>
+                <a class="py-1 flex items-center">
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Last 30 days</p>
+                        </a>
+                    </div>
+                    <div class="my-2">
+                        <a class="flex items-center">
+                            <input type="checkbox" name="checks" class="p-2">
+                            <p class="hover:text-yellow-500 px-3">Last 90 days</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- Bes deals -->
+            <div class="p-3 my-3">
+                <h1 class="text-2xl font-bold py-3 uppercase">Best Dealers</h1>
+                <marquee vehavior="alternate" direction="up" scrollamount="8">
+                    <div class="flex items-center my-5">
+                        <img src="./images/galaxy-a34-5g-sm.webp" alt="" class="w-[60px] rounded h-[80px]">
+                        <a href="#" class="px-2">
+                            <p class="text-xl text-blue-f hover:text-yellow-500">Sumsumng 23</p>
+                            <p class="p-2">₹2,000</p>
+                        </a>
+                    </div>
+                    <div class="flex items-center my-5">
+                        <img src="./images/e5.jpeg" alt="" class="w-[60px] rounded h-[80px]">
+                        <a href="#" class="px-2">
+                            <p class="text-xl text-blue-f hover:text-yellow-500">Sumsumng 23</p>
+                            <p class="p-2">₹2,000</p>
+                        </a>
+                    </div>
+                    <div class="flex items-center my-5">
+                        <img src="./images/iqoo-z7s.webp" alt="" class="w-[60px] rounded h-[80px]">
+                        <a href="#" class="px-2">
+                            <p class="text-xl text-blue-f hover:text-yellow-500">Sumsumng 23</p>
+                            <p class="p-2">₹2,000</p>
+                        </a>
+                    </div>
+                </marquee>
+            </div>
+        </div>
+    </section>
+    <!-- section2 -->
+    <section class="bg-yellow-g">
+        <div class="mt-[50px] md:mx-[200px] md:flex md:justify-between">
+            <div class="md:flex m-[20px] md:w-[650px] bg-white">
+                <img src="./png/mobilessd-removebg-preview.png" alt="" class="h-[250px] w-[350px] pl-[100px] mt-10 duration-300 hover:scale-105">
+                <div class="py-[30px] md:ml-[-40px] px-3">
+                    <h1 class="text-sky-w text-3xl font-bold">Big Summer Sale</h1>
+                    <h2 class="text-black text-3xl font-bold">On Sale Smart Phones</h2>
+                    <p class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, explicabo!</p>
+                    <p class="uppercase">Don't Miss <span class="text-sky-w">Up To 70% OFF</span></p>
+                    <button class="bg-blue-f p-3 mt-3 text-white rounded">Learn More</button>
+                </div>
+            </div>
+            <div class="md:flex m-[20px] md:w-[650px] bg-white">
+                <img src="./png/e6-removebg-preview.png" alt="" class="w-[210px] h-[220px] mx-[40px]  duration-300 hover:scale-105 p-[30px] mt-10">
+                <div class="py-[30px] p-3">
+                    <h1 class=" text-sky-w text-3xl font-bold">New Trand In HeadPhones</h1>
+                    <p class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, explicabo!</p>
+                    <p class="uppercase">Our 15 Models</p>
+                    <button class="bg-blue-f p-3 mt-3 text-white rounded">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section electronic -->
+    <section class="w-full md:px-[186px] bg-white p-3">
+        <div class="py-10 z-50">
+            <h1 class="text-blue-f text-3xl font-bold">Electronics :</h1>
+            <p class="my-3 p-3">If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets
+                and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.
+            </p>
+        </div>
+    </section>
+    <section class="w-full md:px-[186px] m-3">
+        <div class="md:flex md:justify-between pb-10">
+            <div class="md:w-[400px] bg-sky-w flex items-center my-2 px-10 p-3 md:h-[150px]">
+                <span><i class="fa-solid fa-dolly text-yellow-g text-6xl"></i></span>
+                <div class="mx-5">
+                    <h1 class="text-3xl font-bold">Free Shipping</h1>
+                    <p>on orders over $100</p>
+                </div>
+            </div>
+            <div class="md:w-[400px] bg-sky-w flex items-center my-2 px-10 p-3 md:h-[150px]">
+                <span> <i class="fa-solid fa-truck-fast text-yellow-g text-6xl"></i></span>
+                <div class="mx-5">
+                    <h1 class="text-3xl font-bold">Fast Delivery</h1>
+                    <p>Word Wide</p>
+                </div>
+            </div>
+            <div class="md:w-[400px] bg-sky-w flex items-center my-2 px-10 p-3 md:h-[150px]">
+                <span> <i class="fa-regular fa-thumbs-up text-yellow-g text-6xl"></i></span>
+                <div class="mx-5">
+                    <h1 class="text-3xl font-bold">Big Choice</h1>
+                    <p>of Products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section6 -->
+    <section class="w-full bg-yellow-g md:px-[186px] mt-2">
+        <div class="md:grid px-[60px] md:grid-cols-4 gap-5 pt-[60px]">
+            <div class="text-center w-[320px] h-[200px]">
+                <span class="text-center "><i class="ri-plane-line p-4 text-3xl bg-blue-f text-sky-w hover:text-4xl duration-300 rounded-full"></i></span>
+                <p class="mt-5 text-gray-600 md:text-xl">free shipping world wide</p>
+            </div>
+            <div class="text-center w-[320px] h-[200px]">
+                <span class=""><i class="ri-refund-fill p-4 text-3xl bg-blue-f text-sky-w hover:text-4xl duration-300 rounded-full"></i></span>
+                <p class="mt-5 text-gray-600 md:text-xl">100% Money Back Guarantee</p>
+            </div>
+            <div class="text-center w-[320px] h-[200px]">
+                <span class=""><i class="ri-bank-card-fill p-4 text-3xl bg-blue-f text-sky-w hover:text-4xl duration-300 rounded-full"></i></span>
+                <p class="mt-5 text-gray-600 md:text-xl">Many Payment Gateway</p>
+            </div>
+            <div class="text-center w-[320px] h-[200px]">
+                <span class=""><i class="ri-customer-service-2-line p-4 text-3xl bg-blue-f text-sky-w hover:text-4xl duration-300 rounded-full"></i></span>
+                <p class="mt-5 text-gray-600 md:text-xl"> 24/7 Online Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="w-full md:px-[186px] mt-2 bg-blue-f">
+        <div class="md:grid-cols-5 grid items-center py-[50px]">
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Quick Links</h1>
+                <ul>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="index.html">Home</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="about.html">About</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="shop.html">Shop</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Information</h1>
+                <ul>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="privacy.html">Privacy Policy</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="term.html">Term & Condition</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="return.html">Returns</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="return.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Extra Links</h1>
+                <ul>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="account.html">MY ACCOUNT</a>
+                    </li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="order.html">Order History</a>
+                    </li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="wish.html">Wish List</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="NewLetter.html">NewLetters</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Contact Us</h1>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-map-pin-2-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Varanasi UP, India</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-mail-line pr-3 text-gray-500 text-xl opacity-80"></i><p>amitkumar84946@gmail.com</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-phone-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>+91 6393351817</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-send-plane-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Varanasi,UP</p></span>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Follow Us</h1>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-facebook-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Facebook</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-instagram-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Instagram</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-youtube-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Youtube</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-linkedin-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Linkedin</p></a>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center py-5">
+            <p class="text-2xl text-yellow-g">© 2021 Shoppy. All rights reserved | Design by amitkumar.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js " integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js " integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="./script.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js "></script>
+    <script>
+        // slider
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            perMove: 1,
+            autoplay: true,
+            arrows: true,
+            dots: true,
+            breakpoints: {
+                640: {
+                    perPage: 1,
+                    arrows: false,
+                },
+                480: {
+                    perPage: 1,
+                    arrows: false,
+                }
+            }
+        });
+        splide.mount();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".main i").click(function() {
+                $(".menu").toggleClass("main");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Initial state, show all items
+            $('.item').show();
+
+            // Filter button click event
+            $('.filter-btn').click(function() {
+                var category = $(this).data('filter');
+
+                // Show only items with the selected category or show all if 'all' is selected
+                if (category === 'all') {
+                    $('.item').show();
+                } else {
+                    $('.item').hide();
+                    $('.item[data-category="' + category + '"]').show();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

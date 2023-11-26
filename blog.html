@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shoppy</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+    <!-- Splide JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* main */
+        
+        .splide {
+            width: 50%;
+            /* Set the width of the slider container */
+            /* margin: 0 auto; */
+            /* Center the slider on the page */
+        }
+        
+        .splide__arrow {
+            font-size: 24px;
+            color: #2191e7;
+        }
+        
+        .splide__pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .splide__pagination__page {
+            display: inline-block;
+            margin: 0 5px;
+            width: 10px;
+            height: 10px;
+            color: #ffffff;
+            border-radius: 50%;
+        }
+        /* Customize active pagination dot */
+        
+        .splide__pagination__page.is-active {
+            background-color: #01345B;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="header w-full md:px-[186px] z-50 scroll">
+        <div class="md:flex md:justify-between items-center shadow user-page py-1 px-2">
+            <div class="py-2 text-blue-f">
+                <h1>Need Help? <span>Call Us:</span><span>+916393351817</span></h1>
+            </div>
+            <ul class="flex items-center gap-5 text-center">
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[80px] rounded p-2"><a href="register.html">Register</a></li>
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[80px] rounded p-2"><a href="login.html">Login</a></li>
+                <li class="hover:scale-105 duration-300 md:bg-sky-w w-[120px] rounded p-2"><a href="account.html">My Account</a></li>
+            </ul>
+        </div>
+        <div class="md:flex md:justify-between items-center bg-white py-3">
+            <a href="#home.html" class="logo text-black font-bold text-4xl px-3">Shoppee.com <span class="text-red-600"></span></a>
+            <div class="user">
+                <div class="user1 flex justify-between p-2">
+                    <form action="" class="search-form pl-3 flex bg-white rounded shadow">
+                        <input type="search" placeholder="search here..." id="search-box" class=" pr-3 bg-none outline-none md:w-[410px] p-2">
+                        <button class="search" onclick="ok();"><i class="ri-search-line  rounded text-blue-f outline-none bg-sky-w p-3 px-10 text-xl"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="flex md:justify-between items-center mx-2" id="icons-2">
+                <a href="cart.html"><i class="ri-moon-line text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html"><i class="fa-regular fa-heart text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html" class="flex items-center text-center"><i class="fa-solid fa-cart-shopping text-blue-f text-2xl p-1"></i>Cart</a>
+            </div>
+        </div>
+        <div class="main md:hidden px-3 flex items-center justify-between bg-yellow-g">
+            <i class="ri-menu-line font-bold text-3xl"></i>
+            <div class="px-10 flex items-center">
+                <a href="cart.html"><i class="ri-moon-line text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html"><i class="fa-regular fa-heart text-blue-f text-2xl px-5"></i></a>
+                <a href="cart.html" class="flex items-center text-center"><i class="fa-solid fa-cart-shopping text-blue-f text-2xl p-1"></i>Cart</a>
+            </div>
+        </div>
+    </nav>
+    <header class="sticky z-50 top-0">
+        <div class="menu md:flex md:justify-around md:items-center bg-blue-f p-2" id="header-1">
+            <select class="grid grid-cols-1 p-3 bg-yellow-g text-blue-f ml-[20px] px-5">
+                    <option value="Mobile" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Mobile Phones</option>
+                    <option value="Desktop" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Desktop</option>
+                    <option value="Laptop" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Laptop</option>
+                    <option value="HeadPhone" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>HeadPhone</option>
+                    <option value="PanDrive" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>PanDrive</option>
+                    <option value="Camera" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Camera</option>
+                    <option value="Speaker" class="py-2 pt-3 flex items-center bg-blue-f text-white text-center text-xl shadow"><i class="ri-arrow-right-s-line text-xl text-sky-w"></i>Speaker</option>
+                </select>
+            <ul class="navbar md:flex justify-between text-blue-f md:ml-[300px]">
+                <li class="text-yellow-g hover:scale-100 pt-4 active text-center h-[55px] md:w-[100px] duration-300 active"><a href="index.html">home</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="about.html">about</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[150px] duration-300"><a href="newarraival.html">new Arraivals</a></li>
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="blog.html">blogs</a></li>
+                <!-- <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="gallery.html">gallery</a></li> -->
+                <li class="text-yellow-g hover:scale-125 pt-4 text-center h-[55px] md:w-[100px] duration-300"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- contact us -->
+    <section class="w-full relative mt-2" id="product_effect">
+        <div class="h-[300px]"><img src="./png/technology-communication-icons-symbols-concept_53876-120314.avif" alt="" class="blur-sm w-full h-[300px] bg-cover bg-center">
+            <div class="absolute mt-[-300px] w-full h-[300px]">
+                <div class="mt-[100px] z-50">
+                    <h1 class="pl-[200px] text-4xl font-bold text-blue-f">Blogs</h1>
+                    <span class="pl-[200px] text-xl text-yellow-g flex items-center"><a href="#">Home</a><i class="ri-arrow-right-s-line px-2 text-2xl"></i>Blog Page</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blogs page -->
+    <section class="w-full md:px-[186px] mt-3">
+        <div class="md:flex md:justify-between">
+            <div class="md:w-[65%]">
+                <div class="p-5 shadow-xl">
+                    <img src="./png/blogs-4.avif" alt="" class="w-full h-[400px]">
+                    <span class="text-blue-f opacity-80 flex items-center py-3 text-2xl">Oct 22, 2023 -
+                        <p class="text-yellow-g">by Maureen Bio</p>
+                    </span>
+                    <a href="#" class="text-blue-f text-3xl hover:text-yellow-500">Sed ut perspiciatis unde omnis iste natus</a>
+                    <p class="w-[92%] text-xl py-2 opacity-60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.</p>
+                    <button class="bg-yellow-g text-blue-f hover:text-white rounded p-2 h-[50px] w-[150px] my-2">Read More</button>
+                </div>
+                <div class="p-5 shadow-xl">
+                    <img src="./png/blogs7.avif" alt="" class="w-full h-[400px]">
+                    <span class="text-blue-f opacity-80 flex items-center py-3 text-2xl">Oct 22, 2023 -
+                        <p class="text-yellow-g">by Maureen Bio</p>
+                    </span>
+                    <a href="#" class="text-blue-f text-3xl hover:text-yellow-500">Sed ut perspiciatis unde omnis iste natus</a>
+                    <p class="w-[92%] text-xl py-2 opacity-60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.</p>
+                    <button class="bg-yellow-g text-blue-f hover:text-white rounded p-2 h-[50px] w-[150px] my-2">Read More</button>
+                </div>
+                <div class="p-5 shadow-xl">
+                    <img src="./png/blogs9.avif" alt="" class="w-full h-[400px]">
+                    <span class="text-blue-f opacity-80 flex items-center py-3 text-2xl">Oct 22, 2023 -
+                        <p class="text-yellow-g">by Maureen Bio</p>
+                    </span>
+                    <a href="#" class="text-blue-f text-3xl hover:text-yellow-500">Sed ut perspiciatis unde omnis iste natus</a>
+                    <p class="w-[92%] text-xl py-2 opacity-60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.</p>
+                    <button class="bg-yellow-g text-blue-f hover:text-white rounded p-2 h-[50px] w-[150px] my-2">Read More</button>
+                </div>
+            </div>
+            <div class="md:w-[30%]">
+                <div class="p-3 my-3">
+                    <h1 class="text-3xl font-bold py-3">Categories</h1>
+                    <div class="shadow flex justify-between p-3">
+                        <a href="link" class="hover:text-yellow-500">Electronics</a>
+                        <span class="inline-flex items-center rounded-md bg-yellow-g p-2 h-[30px] w-[30px] text-2xl text-white font-medium text-blue-f ring-1 ring-inset ring-gray-500/5">1</span>
+                    </div>
+                    <div class="shadow flex justify-between p-3">
+                        <a href="link" class="hover:text-yellow-500">HeadPhone</a>
+                        <span class="inline-flex items-center rounded-md bg-yellow-g p-2 h-[30px] w-[30px] text-2xl text-white font-medium text-blue-f ring-1 ring-inset ring-gray-500/5">1</span>
+                    </div>
+                    <div class="shadow flex justify-between p-3">
+                        <a href="link" class="hover:text-yellow-500">Accesories</a>
+                        <span class="inline-flex items-center rounded-md bg-yellow-g p-2 h-[30px] w-[30px] text-2xl text-white font-medium text-blue-f ring-1 ring-inset ring-gray-500/5">1</span>
+                        </>
+                    </div>
+                    <div class="shadow flex justify-between p-3">
+                        <a href="link" class="hover:text-yellow-500">Home Audio</a>
+                        <span class="inline-flex items-center rounded-md bg-yellow-g p-2 h-[30px] w-[30px] text-2xl text-white font-medium text-blue-f ring-1 ring-inset ring-gray-500/5">1</span>
+                        </>
+                    </div>
+                </div>
+                <div class="p-3 my-3">
+                    <h1 class="text-3xl font-bold py-3">Recent Posts</h1>
+                    <div class="flex items-center my-3">
+                        <img src="./png/blog3.avif" alt="" class="w-[100px] rounded h-[90px]">
+                        <div class="px-2">
+                            <a href="#" class="text-xl text-blue-f hover:text-yellow-500">Sed do eiusmod tempor ut</a>
+                            <p class="p-2">Oct 25, 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <img src="./png/blogs-4.avif" alt="" class="w-[100px] rounded h-[90px]">
+                        <div class="px-2">
+                            <a href="#" class="text-xl text-blue-f hover:text-yellow-500">Sed do eiusmod tempor ut</a>
+                            <p class="p-2">Oct 26, 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <img src="./png/blogs5.avif" alt="" class="w-[100px] rounded h-[90px]">
+                        <div class="px-2">
+                            <a href="#" class="text-xl text-blue-f hover:text-yellow-500">Sed do eiusmod tempor ut</a>
+                            <p class="p-2">Oct 27, 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <img src="./png/blogs6.avif" alt="" class="w-[100px] rounded h-[90px]">
+                        <div class="px-2">
+                            <a href="#" class="text-xl text-blue-f hover:text-yellow-500">Sed do eiusmod tempor ut</a>
+                            <p class="p-2">Oct 28, 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 my-3">
+                    <h1 class="text-3xl font-bold py-3">Gallery</h1>
+                    <div class="grid grid-cols-3">
+                        <a href="#"> <img src="./png/blogs7.avif" alt="" class="w-[100px] my-2 rounded h-[100px]"></a>
+                        <a href="#"> <img src="./png/blogs2.avif" alt="" class="w-[100px] my-2 rounded h-[100px]"></a>
+                        <a href="#"> <img src="./png/blogs1.avif" alt="" class="w-[100px] my-2 rounded h-[100px]"></a>
+                        <a href="#"> <img src="./png/blog3.avif" alt="" class="w-[100px] my-2 rounded h-[100px]"></a>
+                    </div>
+                </div>
+                <div class="p-3 my-3 w-[300px]">
+                    <h1 class="text-3xl font-bold py-3">Tags</h1>
+                    <div class="grid grid-cols-2 justify-between">
+                        <a href="#" class="bg-sky-w hover:bg-yellow-500 hover:text-white duration-300 text-center my-2 p-2 rounded w-[120px]">electronics</a>
+                        <a href="#" class="bg-sky-w hover:bg-yellow-500 hover:text-white duration-300 text-center my-2 p-2 rounded w-[80px]">iphone</a>
+                        <a href="#" class="bg-sky-w hover:bg-yellow-500 hover:text-white duration-300 text-center my-2 p-2 rounded w-[90px]">smart</a>
+                        <a href="#" class="bg-sky-w hover:bg-yellow-500 hover:text-white duration-300 text-center my-2 p-2 rounded w-[110px]">tv</a>
+                        <a href="#" class="bg-sky-w hover:bg-yellow-500 hover:text-white duration-300 text-center my-2 p-2 rounded w-[100px]">pc</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- news letters -->
+    <section class="my-2 p-2">
+        <div class="bg-yellow-g py-[51px] md:px-[180px] md:flex justify-between p-3">
+            <div class="my-5">
+                <h1 class="text-4xl text-blue-f font-bold">Subscribe Newsletter</h1>
+            </div>
+            <form action="https://formsubmit.co/amitk221003@gmail.com " method="POST" class="search-form my-2 md:flex rounded ">
+                <input type="email" placeholder="Enter your email address.." class="pr-3 bg-blue-f lowercase border  md:h-[60px] text-white rounded outline-none md:w-[600px] p-2">
+                <button class="search bg-sky-w mx-1 rounded p-2 border text-blue-f md:h-[60px] md:w-[150px]" onclick=" ok();">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="w-full md:px-[186px] mt-2 bg-blue-f">
+        <div class="md:grid-cols-5 grid items-center py-[50px]">
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Quick Links</h1>
+                <ul>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="index.html">Home</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="about.html">About</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="shop.html">Shop</a></li>
+                    <li class="text-gray-500 my-3 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Information</h1>
+                <ul>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="privacy.html">Privacy Policy</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="term.html">Term & Condition</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="return.html">Returns</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="return.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Extra Links</h1>
+                <ul>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="account.html">MY ACCOUNT</a>
+                    </li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="order.html">Order History</a>
+                    </li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white"><a href="wish.html">Wish List</a></li>
+                    <li class="text-gray-500 my-2 opacity-80 hover:scale-105 duration-200 hover:text-white">
+                        <a href="NewLetter.html">NewLetters</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Contact Us</h1>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-map-pin-2-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Varanasi UP, India</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-mail-line pr-3 text-gray-500 text-xl opacity-80"></i><p>amitkumar84946@gmail.com</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-phone-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>+91 6393351817</p></span>
+                <span class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-send-plane-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Varanasi,UP</p></span>
+            </div>
+            <div class="px-10 w-full">
+                <h1 class="font-bold text-sky-w text-2xl my-3">Follow Us</h1>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-facebook-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Facebook</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-instagram-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Instagram</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-youtube-line pr-3 text-gray-500 text-xl opacity-80"></i><p>Youtube</p></a>
+                <a href="#" class="flex my-2 items-center hover:scale-105 duration-200 hover:text-white text-gray-500 opacity-80"><i class="ri-linkedin-fill pr-3 text-gray-500 text-xl opacity-80"></i><p>Linkedin</p></a>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center py-5">
+            <p class="text-2xl text-yellow-g">© 2021 Shoppy. All rights reserved | Design by amitkumar.</p>
+        </div>
+    </footer>
+    <!-- script -->
+    <script src="./script.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".main i").click(function() {
+                $(".menu").toggleClass("main");
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
