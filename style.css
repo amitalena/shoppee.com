@@ -241,12 +241,12 @@
         position: absolute;
         background: var(--blue-f);
         padding-top: 10px;
-        margin-left: 15px;
+       
     }
     
     .menu ul li:hover .sub-menu-1 ul {
         display: block;
-        margin: 10px;
+        margin: 5px 5px;
     }
     
     .menu ul li:hover .sub-menu-1 ul li {
