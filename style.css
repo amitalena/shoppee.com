@@ -232,7 +232,37 @@
             height: 100%;
             width: 100%;
         }
-        .imgs-page img {
-            padding-left: 90px;
-        }
+       .sub-menu-1 {
+        display: none;
+    }
+    
+    .menu ul li:hover .sub-menu-1 {
+        display: block;
+        position: absolute;
+        background: var(--blue-f);
+        padding-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .menu ul li:hover .sub-menu-1 ul {
+        display: block;
+        margin: 10px;
+    }
+    
+    .menu ul li:hover .sub-menu-1 ul li {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted #fff;
+        background: transparent;
+        border-radius: left;
+        color: var(--yellow-g);
+    }
+    
+    .menu ul li:hover .sub-menu-1 ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu ul li:hover .sub-menu-1 ul li a:hover {
+        color: var(--sky-w);
+    }
     }
